@@ -1,4 +1,4 @@
-# Simulador de la Liga BetPlay — Documentación del proyecto
+# Simulador de la Liga BetPlay 
 
 ## Descripción del Proyecto
 
@@ -100,7 +100,7 @@ Solución de Visual Studio que agrupa el proyecto para abrirlo y compilarlo desd
 
 Este documento: descripción general del trabajo, características, objetivo, tecnologías, estructura y rol de cada archivo fuente relevante.
 
---
+---
 
 ## Autor
 
