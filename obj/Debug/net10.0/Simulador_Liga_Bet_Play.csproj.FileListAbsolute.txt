@@ -1,0 +1,14 @@
+c:\Users\ASUS\Documents\PROGRAMACION\C#\CSharProjects\Simulador_Liga_Bet_Play\bin\Debug\net10.0\Simulador_Liga_Bet_Play.exe
+c:\Users\ASUS\Documents\PROGRAMACION\C#\CSharProjects\Simulador_Liga_Bet_Play\bin\Debug\net10.0\Simulador_Liga_Bet_Play.deps.json
+c:\Users\ASUS\Documents\PROGRAMACION\C#\CSharProjects\Simulador_Liga_Bet_Play\bin\Debug\net10.0\Simulador_Liga_Bet_Play.runtimeconfig.json
+c:\Users\ASUS\Documents\PROGRAMACION\C#\CSharProjects\Simulador_Liga_Bet_Play\bin\Debug\net10.0\Simulador_Liga_Bet_Play.dll
+c:\Users\ASUS\Documents\PROGRAMACION\C#\CSharProjects\Simulador_Liga_Bet_Play\bin\Debug\net10.0\Simulador_Liga_Bet_Play.pdb
+c:\Users\ASUS\Documents\PROGRAMACION\C#\CSharProjects\Simulador_Liga_Bet_Play\obj\Debug\net10.0\Simulador_Liga_Bet_Play.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\ASUS\Documents\PROGRAMACION\C#\CSharProjects\Simulador_Liga_Bet_Play\obj\Debug\net10.0\Simulador_Liga_Bet_Play.AssemblyInfoInputs.cache
+c:\Users\ASUS\Documents\PROGRAMACION\C#\CSharProjects\Simulador_Liga_Bet_Play\obj\Debug\net10.0\Simulador_Liga_Bet_Play.AssemblyInfo.cs
+c:\Users\ASUS\Documents\PROGRAMACION\C#\CSharProjects\Simulador_Liga_Bet_Play\obj\Debug\net10.0\Simulador_Liga_Bet_Play.csproj.CoreCompileInputs.cache
+c:\Users\ASUS\Documents\PROGRAMACION\C#\CSharProjects\Simulador_Liga_Bet_Play\obj\Debug\net10.0\Simulador_Liga_Bet_Play.dll
+c:\Users\ASUS\Documents\PROGRAMACION\C#\CSharProjects\Simulador_Liga_Bet_Play\obj\Debug\net10.0\refint\Simulador_Liga_Bet_Play.dll
+c:\Users\ASUS\Documents\PROGRAMACION\C#\CSharProjects\Simulador_Liga_Bet_Play\obj\Debug\net10.0\Simulador_Liga_Bet_Play.pdb
+c:\Users\ASUS\Documents\PROGRAMACION\C#\CSharProjects\Simulador_Liga_Bet_Play\obj\Debug\net10.0\Simulador_Liga_Bet_Play.genruntimeconfig.cache
+c:\Users\ASUS\Documents\PROGRAMACION\C#\CSharProjects\Simulador_Liga_Bet_Play\obj\Debug\net10.0\ref\Simulador_Liga_Bet_Play.dll
