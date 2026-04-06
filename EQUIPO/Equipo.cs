@@ -1,8 +1,7 @@
+using System.Text.Json.Serialization;
+
 namespace Simulador_Liga_Bet_Play;
 
-/// <summary>
-/// Representa un equipo de la Liga BetPlay con sus estadísticas competitivas.
-/// </summary>
 public class Equipo
 {
     public string Nombre { get; set; } = string.Empty;
@@ -21,13 +20,9 @@ public class Equipo
 
     public int TP { get; set; }
 
+    [JsonIgnore]
     public int DiferenciaGol => GF - GC;
 
-    /// <summary>
-    /// Actualiza estadísticas tras un partido desde la perspectiva de este equipo.
-    /// </summary>
-    /// <param name="golesMarcados">Goles anotados por el equipo.</param>
-    /// <param name="golesRecibidos">Goles encajados por el equipo.</param>
     public void AplicarResultado(int golesMarcados, int golesRecibidos)
     {
         PJ++;

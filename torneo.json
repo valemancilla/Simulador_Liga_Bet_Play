@@ -1,0 +1,14 @@
+{
+  "equipos": [
+    {
+      "nombre": "Deportivo Ejemplo FC",
+      "pj": 3,
+      "pg": 2,
+      "pe": 0,
+      "pp": 1,
+      "gf": 5,
+      "gc": 3,
+      "tp": 6
+    }
+  ]
+}

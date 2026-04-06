@@ -12,3 +12,5 @@ c:\Users\ASUS\Documents\PROGRAMACION\C#\CSharProjects\Simulador_Liga_Bet_Play\ob
 c:\Users\ASUS\Documents\PROGRAMACION\C#\CSharProjects\Simulador_Liga_Bet_Play\obj\Debug\net10.0\Simulador_Liga_Bet_Play.pdb
 c:\Users\ASUS\Documents\PROGRAMACION\C#\CSharProjects\Simulador_Liga_Bet_Play\obj\Debug\net10.0\Simulador_Liga_Bet_Play.genruntimeconfig.cache
 c:\Users\ASUS\Documents\PROGRAMACION\C#\CSharProjects\Simulador_Liga_Bet_Play\obj\Debug\net10.0\ref\Simulador_Liga_Bet_Play.dll
+c:\Users\ASUS\Documents\PROGRAMACION\C#\CSharProjects\Simulador_Liga_Bet_Play\obj\Debug\net10.0\Simulador_Liga_Bet_Play.sourcelink.json
+c:\Users\ASUS\Documents\PROGRAMACION\C#\CSharProjects\Simulador_Liga_Bet_Play\bin\Debug\net10.0\torneo.json

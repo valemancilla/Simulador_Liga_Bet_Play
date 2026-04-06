@@ -10,6 +10,8 @@ internal static class Program
         Console.OutputEncoding = System.Text.Encoding.UTF8;
         Console.Title = "Simulador de la Liga BetPlay";
 
+        TorneoPersistencia.CargarSiExiste(Torneo);
+
         bool salir;
         do
         {
@@ -60,9 +62,6 @@ internal static class Program
         } while (!salir);
     }
 
-    /// <summary>
-    /// Limpia la consola antes de cada pantalla o prompt (interacción).
-    /// </summary>
     private static void LimpiarYMensaje(string? subtitulo)
     {
         Console.Clear();
@@ -118,7 +117,10 @@ internal static class Program
         }
 
         if (Torneo.RegistrarEquipo(nombre))
+        {
             Console.WriteLine($"Equipo '{nombre.Trim()}' registrado correctamente.");
+            TryGuardarTorneo();
+        }
         else
             Console.WriteLine("No se pudo registrar: nombre vacío, duplicado o ya existe un equipo igual (ignora mayúsculas).");
     }
@@ -226,6 +228,19 @@ internal static class Program
         LimpiarYMensaje("--- SIMULAR PARTIDO — PARTIDO REGISTRADO ---");
         Console.WriteLine("Partido registrado. Estadísticas actualizadas para ambos equipos.");
         Console.WriteLine($"Resultado final: {local.Nombre} {gl} - {gv} {visita.Nombre}");
+        TryGuardarTorneo();
+    }
+
+    private static void TryGuardarTorneo()
+    {
+        try
+        {
+            TorneoPersistencia.Guardar(Torneo);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"\nNo se pudieron guardar los datos: {ex.Message}");
+        }
     }
 
     private static void VerTablaPosicionesPantalla()

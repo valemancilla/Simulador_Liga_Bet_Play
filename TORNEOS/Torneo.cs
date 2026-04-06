@@ -2,12 +2,17 @@ using System.Globalization;
 
 namespace Simulador_Liga_Bet_Play;
 
-
 public class Torneo
 {
     private readonly List<Equipo> _equipos = [];
 
     public IReadOnlyList<Equipo> Equipos => _equipos;
+
+    public void CargarEstado(IReadOnlyList<Equipo> equipos)
+    {
+        _equipos.Clear();
+        _equipos.AddRange(equipos);
+    }
 
     public bool RegistrarEquipo(string nombre)
     {
@@ -31,7 +36,6 @@ public class Torneo
             string.Equals(e.Nombre, n, StringComparison.OrdinalIgnoreCase));
     }
 
-    
     public IReadOnlyList<Equipo> ObtenerTablaPosiciones()
     {
         return _equipos
@@ -42,17 +46,11 @@ public class Torneo
             .ToList();
     }
 
-    /// <summary>
-    /// Equipos ordenados por puntos (y desempates según reglas de la liga).
-    /// </summary>
     public IReadOnlyList<Equipo> ObtenerEquiposOrdenadosPorPuntos()
     {
         return ObtenerTablaPosiciones();
     }
 
-    /// <summary>
-    /// Método completo para la tabla de posiciones: líneas formateadas vía LINQ.
-    /// </summary>
     public IReadOnlyList<string> ObtenerLineasTablaPosicionesCompleta()
     {
         return ObtenerTablaPosiciones()
@@ -61,9 +59,6 @@ public class Torneo
             .ToList();
     }
 
-    /// <summary>
-    /// Equipos que no han perdido ningún partido (PP == 0), misma consulta que invictos según el documento.
-    /// </summary>
     public IReadOnlyList<Equipo> ObtenerEquiposQueNoHanPerdidoNingunPartido()
     {
         return ObtenerEquiposInvictos();
@@ -77,8 +72,6 @@ public class Torneo
         local.AplicarResultado(golesLocal, golesVisitante);
         visitante.AplicarResultado(golesVisitante, golesLocal);
     }
-
-    // --- Consultas LINQ (documento del proyecto) ---
 
     public Equipo? ObtenerLider()
     {
@@ -130,9 +123,6 @@ public class Torneo
         return _equipos.Where(e => e.PP == max).ToList();
     }
 
-    /// <summary>
-    /// Resumen de la consulta del documento (§9.6): equipos con más empates y equipos con más derrotas.
-    /// </summary>
     public string ObtenerResumenMasEmpatesYMasDerrotas()
     {
         if (_equipos.Count == 0)
@@ -148,9 +138,6 @@ public class Torneo
             $"Equipos con más partidos perdidos: {Nombres(masDerrotas)}";
     }
 
-    /// <summary>
-    /// Equipos que no han perdido ningún partido (PP == 0).
-    /// </summary>
     public IReadOnlyList<Equipo> ObtenerEquiposInvictos()
     {
         return _equipos.Where(e => e.PP == 0).ToList();
@@ -221,9 +208,6 @@ public class Torneo
         return _equipos.Where(e => e.TP < promedio).ToList();
     }
 
-    /// <summary>
-    /// Proyección personalizada para tabla (posición, nombre, PTS, DG, GF, GC).
-    /// </summary>
     public IReadOnlyList<(int Posicion, string Nombre, int TP, int DG, int GF, int GC)> ObtenerTablaProyeccionPersonalizada()
     {
         return ObtenerTablaPosiciones()
@@ -231,9 +215,6 @@ public class Torneo
             .ToList();
     }
 
-    /// <summary>
-    /// Agrupación por puntos (ranking simple por escalones de TP).
-    /// </summary>
     public IOrderedEnumerable<IGrouping<int, Equipo>> ObtenerRankingAgrupadoPorPuntos()
     {
         return _equipos
@@ -262,9 +243,6 @@ public class Torneo
             $"Líder: {liderTxt} | Mejor ofensiva (GF): {ofensiva} | Mejor defensiva (menos GC): {defensiva}");
     }
 
-    /// <summary>
-    /// Resumen de métricas destacadas del torneo (consultas LINQ combinadas).
-    /// </summary>
     public string ObtenerTextoEstadisticasDestacadas()
     {
         if (_equipos.Count == 0)
