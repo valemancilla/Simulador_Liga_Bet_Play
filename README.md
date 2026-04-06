@@ -223,12 +223,7 @@ Solución de Visual Studio que agrupa el proyecto para abrirlo y compilarlo desd
 
 ---
 
-
-
 ## Autor
-
-
-
 **Nombre:** *Valentina Mancilla*  
 
 
